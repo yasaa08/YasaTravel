@@ -1,0 +1,164 @@
+<html>
+  <head>
+    <title>YasaTravel - Booking Armada Travel Cepat & Mudah</title>
+    <link rel="stylesheet" href="Gaya.css" />
+    <link rel="icon" href="media/YasaBulett.png" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="main-header">
+      <div class="container header-container">
+        <a href="Index.html" class="logo">
+          Yasa<span class="logo-accent">Travel</span>
+        </a>
+        <nav class="main-nav">
+          <a href="Index.html">Beranda</a>
+          <a href="TentangKami.html">Tentang Kami</a>
+          <a href="Kontak.html">Kontak</a>
+        </nav>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-menu-dropdown">
+        <a href="Index.html">Beranda</a>
+        <a href="TentangKami.html">Tentang Kami</a>
+        <a href="Kontak.html">Kontak</a>
+        <a href="Login.html" class="btn btn-secondary">Masuk</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <h1>Tentang YasaTravel</h1>
+          <p>Mengenal Lebih Dekat Partner Perjalanan Terpercaya Anda</p>
+        </div>
+      </section>
+
+      <!-- Story Section -->
+      <section class="section">
+        <div class="container">
+          <div class="story-grid">
+            <div class="story-image">
+              <img src="media/yasa.jpg" alt="Tentang Kami" />
+            </div>
+            <div class="story-content">
+              <h2>Perjalanan Kami Dimulai dari Impian</h2>
+              <p>
+                YasaTravel lahir dari sebuah gagasan sederhana: setiap
+                perjalanan harus menjadi pengalaman yang menyenangkan, aman, dan
+                tak terlupakan. Berdiri sejak tahun 2020 di Bandung, kami
+                memulai dengan beberapa armada dan tekad yang kuat untuk
+                memberikan layanan transportasi terbaik.
+              </p>
+              <p>
+                Kami percaya bahwa perjalanan bukan hanya tentang berpindah dari
+                satu tempat ke tempat lain, tetapi tentang menciptakan kenangan.
+                Oleh karena itu, kami mendedikasikan diri untuk memastikan
+                setiap detail perjalanan Anda, mulai dari kebersihan armada
+                hingga keramahan pengemudi, selalu dalam standar tertinggi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Values Section -->
+      <section class="section section-light">
+        <div class="container">
+          <div class="section-header">
+            <h2>Nilai-Nilai Kami</h2>
+            <p>Tiga pilar utama yang menjadi fondasi layanan kami.</p>
+          </div>
+          <div class="values-grid">
+            <div class="value-item">
+              <div class="value-icon">
+                <i data-lucide="shield-check"></i>
+              </div>
+              <h3>Keamanan</h3>
+              <p>
+                Keselamatan Anda adalah prioritas nomor satu. Armada kami secara
+                rutin menjalani pemeriksaan menyeluruh dan dilengkapi dengan
+                standar keamanan terkini.
+              </p>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">
+                <i data-lucide="sofa"></i>
+              </div>
+              <h3>Kenyamanan</h3>
+              <p>
+                Kami ingin Anda merasa rileks sepanjang perjalanan. Interior
+                armada yang bersih, kursi yang nyaman, dan fasilitas modern kami
+                siapkan untuk Anda.
+              </p>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">
+                <i data-lucide="watch"></i>
+              </div>
+              <h3>Keandalan</h3>
+              <p>
+                Ketepatan waktu dan pelayanan yang profesional adalah janji
+                kami. Anda bisa mengandalkan kami untuk setiap rencana
+                perjalanan Anda.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <h3 class="logo">Yasa<span class="logo-accent">Travel</span></h3>
+            <p>
+              YasaTravel adalah partner perjalanan terpercaya Anda, menyediakan
+              layanan sewa armada travel dengan kualitas terbaik untuk segala
+              kebutuhan Anda di seluruh Indonesia.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h4>Tautan Cepat</h4>
+            <ul>
+              <li><a href="TentangKami.html">Cara Booking</a></li>
+              <li><a href="TentangKami.html">FAQ</a></li>
+              <li><a href="Kontak.html">Hubungi Kami</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Kontak</h4>
+            <ul>
+              <li><i data-lucide="phone"></i> 0818104008</li>
+              <li><i data-lucide="mail"></i> kennanelyasa@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 YasaTravel. Semua Hak Cipta Dilindungi.</p>
+          <div class="social-media">
+            <a href="https://www.instagram.com/maskennan_/"
+              ><i data-lucide="instagram"></i
+            ></a>
+            <a href="https://www.facebook.com/kennan.e.yasa/"
+              ><i data-lucide="facebook"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Initialize Lucide Icons
+      lucide.createIcons();
+
+      // Mobile Menu Toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
