@@ -1,0 +1,230 @@
+<html>
+  <head>
+    <title>YasaTravel - Booking Armada Travel Cepat & Mudah</title>
+    <link rel="stylesheet" href="Gaya.css" />
+    <link rel="icon" href="media/YasaBulett.png" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="main-header">
+      <div class="container header-container">
+        <a href="Index.html" class="logo"
+          >Yasa<span class="logo-accent">Travel</span></a
+        >
+        <nav class="main-nav">
+          <a href="Index.html">Beranda</a>
+          <a href="TentangKami.html">Tentang Kami</a>
+          <a href="Kontak.html">Kontak</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <h1>Hubungi Kami</h1>
+          <p>
+            Kami siap membantu merencanakan perjalanan Anda. Jangan ragu untuk
+            menghubungi kami!
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="section">
+        <div class="container">
+          <div class="contact-grid">
+            <!-- Kolom Informasi Kontak -->
+            <div class="contact-info">
+              <h3>Informasi Kontak</h3>
+              <p>
+                Anda bisa menghubungi kami melalui telepon, email, atau datang
+                langsung ke kantor kami pada jam kerja.
+              </p>
+              <ul>
+                <li>
+                  <i data-lucide="phone"></i>
+                  <div><strong>Whatsapp</strong><span>0818104008</span></div>
+                </li>
+                <li>
+                  <i data-lucide="mail"></i>
+                  <div>
+                    <strong>Email</strong><span>kennanelyasa@gmail.com</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Kolom Formulir Kontak -->
+            <div class="contact-form-container">
+              <h3>Berikan Rating</h3>
+              <!-- PERUBAHAN: Menambahkan id="contactForm" pada form -->
+              <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                  <label for="name">Nama Lengkap</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="Masukkan nama Anda"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Rating Anda</label>
+                  <div class="rating-stars">
+                    <input
+                      type="radio"
+                      id="star5"
+                      name="rating"
+                      value="5"
+                    /><label for="star5">★</label>
+                    <input
+                      type="radio"
+                      id="star4"
+                      name="rating"
+                      value="4"
+                    /><label for="star4">★</label>
+                    <input
+                      type="radio"
+                      id="star3"
+                      name="rating"
+                      value="3"
+                    /><label for="star3">★</label>
+                    <input
+                      type="radio"
+                      id="star2"
+                      name="rating"
+                      value="2"
+                    /><label for="star2">★</label>
+                    <input
+                      type="radio"
+                      id="star1"
+                      name="rating"
+                      value="1"
+                    /><label for="star1">★</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="message">Pesan Anda</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                    placeholder="Tuliskan pesan Anda di sini..."
+                  ></textarea>
+                </div>
+                <!-- PERUBAHAN: Mengubah tombol menjadi type="submit" agar bisa memicu event 'submit' pada form -->
+                <button
+                  type="submit"
+                  class="px-6 py-3 bg-amber-500 text-white font-semibold rounded-lg shadow-md hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 transition-transform transform hover:scale-105"
+                >
+                  Kirim Review
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Kontainer Pop-up (Modal) - Diletakkan sebelum penutup body -->
+    <div
+      id="popupModal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 popup-transition popup-hidden"
+    >
+      <div
+        class="bg-white rounded-xl shadow-2xl p-8 max-w-sm w-full text-center transform transition-all"
+      >
+        <div
+          class="mx-auto flex items-center justify-center h-16 w-16 bg-green-100 rounded-full mb-4"
+        >
+          <svg
+            class="h-10 w-10 text-green-600"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Berhasil!</h3>
+        <p class="text-gray-600 mb-6">
+          Terimakasih sudah mereview Layanan Pariwisata kami.
+        </p>
+        <button
+          id="closeButton"
+          class="w-full px-4 py-2 bg-amber-500 text-white font-medium rounded-lg hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+        >
+          Tutup
+        </button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <!-- Konten footer Anda di sini -->
+      <div class="container">
+        <div class="footer-bottom">
+          <p>&copy; 2025 YasaTravel. Semua Hak Cipta Dilindungi.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Menjalankan script setelah semua konten halaman dimuat
+      document.addEventListener("DOMContentLoaded", function () {
+        // Mengaktifkan ikon Lucide
+        lucide.createIcons();
+
+        // --- Mendapatkan elemen dari DOM ---
+        const contactForm = document.getElementById("contactForm");
+        const popupModal = document.getElementById("popupModal");
+        const closeButton = document.getElementById("closeButton");
+
+        // --- Fungsi untuk menampilkan pop-up ---
+        function openPopup() {
+          popupModal.classList.remove("popup-hidden");
+          popupModal.classList.add("popup-visible");
+        }
+
+        // --- Fungsi untuk menyembunyikan pop-up ---
+        function closePopup() {
+          popupModal.classList.add("popup-hidden");
+          popupModal.classList.remove("popup-visible");
+        }
+
+        // --- Menambahkan event listener pada FORM ---
+        contactForm.addEventListener("submit", function (event) {
+          // PERUBAHAN PENTING: Mencegah form mengirim dan me-refresh halaman
+          event.preventDefault();
+
+          // Tampilkan pop-up setelah form dicegah untuk submit
+          openPopup();
+
+          // (Opsional) Mengosongkan form setelah berhasil
+          contactForm.reset();
+        });
+
+        // Sembunyikan pop-up saat tombol tutup diklik
+        closeButton.addEventListener("click", closePopup);
+
+        // Sembunyikan pop-up saat area di luar konten pop-up diklik
+        popupModal.addEventListener("click", (event) => {
+          if (event.target === popupModal) {
+            closePopup();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
